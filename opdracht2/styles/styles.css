@@ -1,0 +1,72 @@
+
+
+
+body {
+	background-color: #63cdda;
+	color: white;
+	font-family: Helvetica;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 4em;
+}
+
+.carousel-container {
+  max-width: 600px;
+  width: 100%;
+  height: 500px;
+  overflow:hidden;
+  margin-right: 1em;
+  margin-left:1em;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .7);
+
+  
+}
+
+
+.carousel-slide {
+	
+	margin-right: 2em;
+	position: absolute;
+	display: flex;
+	left: 0;
+
+	
+}
+
+
+#previousBtn{
+   position: absolute;
+   top: 50%;
+   z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+img {
+	
+	height: 500px;
+	width: auto;
+	margin: 0;
+	text-align: center;
+
+
+}
+
+
