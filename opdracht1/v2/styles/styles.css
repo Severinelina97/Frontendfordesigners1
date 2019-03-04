@@ -1,0 +1,47 @@
+body{
+	background-color: #282828;
+	color:white;
+	text-align:center;
+	font-family: Helvetica;
+}
+
+
+h1 {
+	padding-top: 2em;
+}
+
+p{
+	padding-top: 2em;
+	padding-bottom:1em;
+}
+
+ul {
+	text-align:center;
+	list-style-type:none;
+	padding-left: 0;
+	width: 80%;
+	margin:0 auto;
+
+}
+
+ul li {
+	padding-top:1em;
+	border-radius: 10px;
+    font-size: .8em;
+	padding-left:1em;
+	text-align:left;
+	padding-bottom:1em;
+	text-decoration:none;
+	background-color: #2ecc71;
+	margin-bottom:1em;
+
+	transition:ease-in-out;
+}
+
+.enter {
+	transform: scale(1.1, 1.1);
+}
+body.draggingover li {
+	background-color:pink;
+
+}
