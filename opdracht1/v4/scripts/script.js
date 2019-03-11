@@ -172,6 +172,7 @@ function startdragging(ev){
 
 
 function draggingover(ev){
+  dragSrcEl.classList.add('zweven');
 	ev.preventDefault();
     ev.dataTransfer.dropEffect = 'move';
     return false;
@@ -188,6 +189,7 @@ function dropping(ev){
 
     setTimeout(function(){
             dragSrcEl.classList.remove('feedbackEffect');
+            dragSrcEl.classList.remove('zweven');
             
     }, 500);
 

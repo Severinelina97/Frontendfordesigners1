@@ -1,12 +1,18 @@
 body{
-	background-color: #282828;
+	background: linear-gradient(#000000 1%, #444444 90%);
+  background-repeat: no-repeat;
 	color:white;
 	text-align:center;
 	font-family: Helvetica;
 }
-
+ img:first-of-type {
+ 	margin-top: 3em;
+ 	margin-left: 3em;
+ 	float: left;
+ }
 
 h1 {
+	font-weight: 200;
 	padding-top: 2em;
 }
 
@@ -19,35 +25,45 @@ ul {
 	text-align:center;
 	list-style-type:none;
 	padding-left: 0;
+	padding-right: 3em;
+	max-width: 900px;
 	width: 80%;
-	margin:0 auto;
+	float: right;
 
 }
 
+.zweven {
+	opacity: .8;
+	background-color: #444444;
+}
 ul li {
 	padding-top:1em;
-	border-radius: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: #00cec9;
     font-size: .8em;
 	padding-left:1em;
 	text-align:left;
 	padding-bottom:1em;
 	text-decoration:none;
-	background-color: #2ecc71;
+	background-color: grey;
 	margin-bottom:1em;
 
 	transition:ease-in-out;
 }
 
+ul li:hover {
+	background-color: #444444;
+}
 .feedbackEffect {
 	color:black;
 	transition: .2s linear;
-    background-color:white;
+    background-color:grey;
 	animation: anim-effect-boris 0.3s forwards;
 }
 
 @keyframes anim-effect-boris {
 	0% {
-		transform: scale3d(0.2, 0.2, 1);
+		transform: scale3d(0.1, 0.1, 1);
 	}
 	25%, 50% {
 		opacity: 1;
