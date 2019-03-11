@@ -11,21 +11,75 @@ let counter = 1;
 const size = carouselImages[0].clientWidth;
 
 
-carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
+carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)'
 
-nextBtn.addEventListener('click',function(){
+
+
+nextBtn.addEventListener('keydown', function(e){
+   
+    var code = e.keyCode || e.which || e.charCode; 
+
+    console.log(code);
+
+    if(code == 39){
+
     if(counter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = 'transform 0.2s ease-in-out';
+
+    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-});
+}});
+
+previousBtn.addEventListener('keydown',function(e){
+    
+    var code = e.keyCode || e.which || e.charCode; 
+
+    console.log(code);
+    
+    if(code == 37){
+    if(counter <= 0) return;
+    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
+    counter--;
+    carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
+}});
+
+
+
+
+
+
+
+
+nextBtn.addEventListener('click',function(){
+
+    if(counter >= carouselImages.length - 1) return;
+    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
+    counter++;
+    console.log(counter)
+    carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)'
+
+    });
 
 previousBtn.addEventListener('click',function(){
     if(counter <= 0) return;
-    carouselSlide.style.transition = 'transform 0.2s ease-in-out';
+    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
     counter--;
+    console.log(counter)
     carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 carouselSlide.addEventListener('transitionend',function(){
