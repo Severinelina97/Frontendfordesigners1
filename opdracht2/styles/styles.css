@@ -62,7 +62,7 @@ transition: .2s ease-in;
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
-    background-image: url("../images/arrowleft.png");
+    background-image: url("../images/arrowLeft.png");
     cursor: pointer;
 }
 #nextBtn{
