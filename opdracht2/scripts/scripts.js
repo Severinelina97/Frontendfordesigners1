@@ -1,99 +1,73 @@
+// gemaakt met code pen slider voorbeeld
 
-//allemaal niet mijn eigen code gebruikt van github voorbeeld!! dev-edwin op git
+jQuery(document).ready(function ($) {
 
-const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
-//Buttons
-const previousBtn = document.querySelector('#previousBtn');
-const nextBtn = document.querySelector('#nextBtn');
-//Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
 
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
 
-carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)'
-
-
-
-nextBtn.addEventListener('keydown', function(e){
    
-    var code = e.keyCode || e.which || e.charCode; 
 
-    console.log(code);
+   
 
-    if(code == 39){
-
-    if(counter >= carouselImages.length - 1) return;
-
-    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
-    counter++;
-    carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-}});
-
-previousBtn.addEventListener('keydown',function(e){
-    
-    var code = e.keyCode || e.which || e.charCode; 
-
-    console.log(code);
-    
-    if(code == 37){
-    if(counter <= 0) return;
-    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
-    counter--;
-    carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-}});
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
 
 
+    $(document).keyup(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '37'){
+        moveLeft();   
+    }
+});
 
+    $(document).keyup(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '39'){
+        moveRight();   
+    }
+});
 
-
-
-
-
-nextBtn.addEventListener('click',function(){
-
-    if(counter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
-    counter++;
-    console.log(counter)
-    carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)'
-
+    $('a.control_prev').click(function () {
+        moveLeft();
     });
 
-previousBtn.addEventListener('click',function(){
-    if(counter <= 0) return;
-    carouselSlide.style.transition = 'transform 0.3s ease-in-out';
-    counter--;
-    console.log(counter)
-    carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-});
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+     
 
 
+});    
 
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-carouselSlide.addEventListener('transitionend',function(){
-    if(carouselImages[counter].id === 'lastClone'){
-        carouselSlide.style.transition = 'none';
-        counter = carouselImages.length -2;
-        carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-    }
-    if(carouselImages[counter].id === 'firstClone'){
-        carouselSlide.style.transition = 'none';
-        counter = carouselImages.length - counter;
-        carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
-
-    }
-});
-
-console.log(carouselImages.length);
