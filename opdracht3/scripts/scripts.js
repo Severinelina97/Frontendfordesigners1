@@ -4,7 +4,8 @@ console.log('hoi, ik werk')
 //Code van mohamad & emma - met eigen aanpassingen van mezelf
 var uri = 'https://open.data.amsterdam.nl/Activiteiten.json';
 var section = document.querySelector('section');
-var button = document.getElementById("button");
+var button = document.getElementById("search");
+var cityBtn = document.getElementById("cityBtn")
 var loadElement = document.querySelector("span");
 var errorMsg = document.querySelector('.errormessage');
 //var loaderElement = document.querySelector("main span");
@@ -74,6 +75,7 @@ function showData (jsonObj) {
 	
 	    var article = document.createElement('article');
 
+
 	    var activiteitenBlok = document.createElement('section');
 	    activiteitenBlok.textContent = activiteiten[i];
 
@@ -85,6 +87,9 @@ function showData (jsonObj) {
 
         var activiteitenlocation = document.createElement('p');
         activiteitenlocation.textContent= activiteiten[i].location.adress + ' ' + activiteiten[i].location.city;
+        
+        var activiteitenData = document.createElement('p');
+        activiteitenData.textContent = activiteiten[i].lastupdated;
 
 
     article.appendChild(activiteitenTitel);
@@ -92,8 +97,28 @@ function showData (jsonObj) {
     article.appendChild(activiteitenlocation);
 
     section.appendChild(article);
-    }
-}
+
+
+
+    //cityBtn.addEventListener('click', cityFilter())
+
+     //function cityFilter(){
+      //if(jsonObj.city !== AMSTERDAM) {
+		//article.classList.add('notamsterdam');
+	}
+
+};
+
+   // }
+
+
+//};
+
+
+
+
+
+
 
 
 

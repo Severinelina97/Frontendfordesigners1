@@ -1,11 +1,13 @@
 
 
 body {
-	background-image: url('../backgrounapi.jpg');
+	background-image: url('../paarsje2.jpg');
 	background-repeat: no-repeat;
-	background-size: 150%;
-    background-attachment: scroll;
-    color: black;
+	background-size:cover;
+    background-attachment: fixed;
+    color: white;
+    padding-left: 9.375em;
+    padding-right: 9.375em;
 	font-family: Roboto;
 	background-color: #DAD8FF;
 	
@@ -13,18 +15,21 @@ body {
 }
 
 header {
+	border-radius: 10px;
+	background-color:black;
 	padding-top: 3em;
 	padding-bottom: 3em;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 2em;
 	width: 100%;
 	
 	opacity: .8;
 }
 header h1 {
 
-	color: black;
+	color: white;
 	margin-top: 2em;
 	text-align: center;
 
@@ -35,9 +40,11 @@ header p {
 }
 
 button {
+
+	margin-right: 1em;
 	font-size: 1.2em;
 	color:white;
-	background-color:black;
+	background-color:#7770FF;
 	border-style:none;
 	border-radius: 10px;
 	
@@ -52,9 +59,8 @@ button:hover {
 	padding:1.2em;
 }
 
-#button {
-	text-align:center;
-	text-align: center;
+#search {
+	text-align: left;
 	margin-bottom:2em;
 	transition: ease-in-out .4s;
 }
@@ -93,9 +99,7 @@ p {
 }
 
 section {
-	display:grid;
-	grid-template-columns:   1fr 1fr 1fr;
-	grid-gap:1em;
+	text-align: left;
 	
 }
 
@@ -104,26 +108,40 @@ article {
 	border-radius: 10px;
 	background-color: white;
 	padding: 1em;
-    min-height: 400px;
-	max-width: 400px;
-	margin: 0 auto;
+   
+	max-width: 700px;
+	
 	margin-bottom: 2em;
-
+    color:black;
 	transition: ease-in .3s;
 }
 
 .errormessage {
+	font-size: .8em;
 	text-align:center;
 	transition: ease-out .3s;
 }
 
 .removed {
-	opacity: 0;
+	display:none;
 }
 
 article:hover {
+
 	background-color: black;
 	color: white;
 
 	transform: scale(1.02);
 }
+
+article:focus {
+    background-color: black;
+	color: white;
+	transform: scale(1.02);
+}
+
+.notamsterdam {
+	display:none;
+}
+
+
