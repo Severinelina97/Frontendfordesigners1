@@ -1,7 +1,8 @@
 # frontend voor designers - opdracht 3
 
-JSON van de movies data staat ook hier:
-deze uri kun je gebruiken voor een van de use case voor opdracht 3.
-[https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json](https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json)
+Voor deze opdracht Laad ik een data API vanuit een json file, die in een link staat, in mijn javascript die vervolgens HTML elementen aanmaakt binnen de DOM. Hierdoor kan ik deze data stylen.
 
-De JSON data is ook los, per film of genre of actors te gebruiken. Check die [hier](https://github.com/KoopReynders/frontendvoordesigners/tree/master/opdracht3/json).
+Ik heb gekozen voor een Data api van evenementen: https://open.data.amsterdam.nl/Activiteiten.json
+hierin staan dingen die je in Amsterdam & omstreken kunt doen. 
+
+In mijn uitwerking zie je een 'evenementen kalender'
