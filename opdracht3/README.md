@@ -6,3 +6,5 @@ Ik heb gekozen voor een Data api van evenementen: https://open.data.amsterdam.nl
 hierin staan dingen die je in Amsterdam & omstreken kunt doen. 
 
 In mijn uitwerking zie je een 'evenementen kalender'
+
+
