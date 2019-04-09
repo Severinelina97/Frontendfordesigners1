@@ -116,6 +116,18 @@ article {
 	transition: ease-in .3s;
 }
 
+a {
+	text-decoration:none;
+	padding: 1em;
+	border-radius:10px;
+	background-color: black;
+	color:white;
+	background-position:absolute;
+	position: fixed;
+	margin-left: 70%;
+	bottom:0;
+}
+
 .errormessage {
 	font-size: .8em;
 	text-align:center;
