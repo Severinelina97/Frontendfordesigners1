@@ -131,6 +131,8 @@ cityBtn.addEventListener('click', function(){
       	cityBtn.classList.toggle('filter');
       	
 		document.body.classList.toggle('notamsterdam');
+		showLoadingSpinner();
+	setTimeout(hideLoadingSpinner, 3000);
 
 
 };
