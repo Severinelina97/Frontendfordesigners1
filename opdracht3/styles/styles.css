@@ -122,6 +122,9 @@ article {
 	transition: ease-out .3s;
 }
 
+.filter {
+	background-color:green;
+}
 .removed {
 	display:none;
 }
@@ -142,7 +145,7 @@ article:focus {
 
 body.notamsterdam  article{
 	position: absolute;
-	visibility: hidden;
+	
 	opacity: 0;
 }
 

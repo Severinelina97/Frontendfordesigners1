@@ -128,6 +128,7 @@ cityBtn.addEventListener('click', function(){
      	
 
       if(jsonData.city !== 'AMSTERDAM') {
+      	cityBtn.classList.toggle('filter');
       	
 		document.body.classList.toggle('notamsterdam');
 
