@@ -140,8 +140,10 @@ article:focus {
 	transform: scale(1.02);
 }
 
-.notamsterdam {
-	display:none;
+body.notamsterdam  article{
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
 }
 
 

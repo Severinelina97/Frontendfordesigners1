@@ -8,6 +8,7 @@ var button = document.getElementById("search");
 var cityBtn = document.getElementById("cityBtn")
 var loadElement = document.querySelector("span");
 var errorMsg = document.querySelector('.errormessage');
+
 //var loaderElement = document.querySelector("main span");
 
 console.log(button);
@@ -33,6 +34,11 @@ function hideLoadingSpinner (){
         })
         .then(function (data) {
             jsonData = data
+
+
+
+
+
         })
 
 button.addEventListener('click', function(){
@@ -42,7 +48,10 @@ button.addEventListener('click', function(){
 	 
 	
 })
-})()
+
+
+
+})() //end: fetch
 
 
 
@@ -85,6 +94,8 @@ function showData (jsonObj) {
         var activiteitenDetails = document.createElement('p');
         activiteitenDetails.textContent= activiteiten[i].details.nl.shortdescription;
 
+        var activiteitenCity = activiteiten[i].city     
+
         var activiteitenlocation = document.createElement('p');
         activiteitenlocation.textContent= activiteiten[i].location.adress + ' ' + activiteiten[i].location.city;
         
@@ -92,29 +103,40 @@ function showData (jsonObj) {
         activiteitenData.textContent = activiteiten[i].lastupdated;
 
 
-    article.appendChild(activiteitenTitel);
-    article.appendChild(activiteitenDetails);
-    article.appendChild(activiteitenlocation);
+        article.appendChild(activiteitenTitel);
+        article.appendChild(activiteitenDetails);
+        article.appendChild(activiteitenlocation);
 
-    section.appendChild(article);
+        section.appendChild(article);
 
 
 
-    //cityBtn.addEventListener('click', cityFilter())
 
-     //function cityFilter(){
-      //if(jsonObj.city !== AMSTERDAM) {
-		//article.classList.add('notamsterdam');
+
+
+
+
+
 	}
 
 };
 
-   // }
+
+// haalt alles weg...
+cityBtn.addEventListener('click', function(){
+
+     	
+
+      if(jsonData.city !== 'AMSTERDAM') {
+      	
+		document.body.classList.toggle('notamsterdam');
 
 
-//};
+};
 
+}); //end: listener click
 
+   
 
 
 
